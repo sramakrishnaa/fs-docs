@@ -1,14 +1,14 @@
 [project]
 site_name = "FS Docs"
 site_author = "Ramakrishna Sangamreddy"
-site_url = "https://sramakrishnaa.github.io/java-fullstack-notes/"
+site_url = "https://sramakrishnaa.github.io/fs-docs/"
 copyright = "Copyright © 2026 Ramakrishna Sangamreddy"
-
-
-
+repo_url = "https://github.com/sramakrishnaa/fs-docs"
+repo_name = "sramakrishnaa/fs-docs"
+edit_uri = "edit/main/docs/"
 
 [project.theme]
-name = "material"
+name = "classic"
 language = "en"
 features = [
     "navigation.instant",
@@ -33,7 +33,11 @@ features = [
 [project.theme.icon]
 edit = "material/pencil"
 view = "material/eye"
+repo = "fontawesome/brands/github"
 
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
@@ -51,3 +55,17 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+admonition = {}
+"pymdownx.highlight" = { anchor_linenums = true, line_spans = "__span", pygments_lang_class = true }
+"pymdownx.inlinehilite" = {}
+"pymdownx.snippets" = {}
+"pymdownx.superfences" = {}
+"pymdownx.tabbed" = { alternate_style = true }
+"pymdownx.details" = {}
+"pymdownx.emoji" = { emoji_index = "material.extensions.emoji.twemoji", emoji_generator = "material.extensions.emoji.to_svg" }
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/sramakrishnaa"
