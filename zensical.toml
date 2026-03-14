@@ -23,6 +23,7 @@ features = [
     "content.tabs.link",
     "content.code.copy",
     "content.code.annotate",
+    "content.code.select",
     "content.action.edit",
     "content.action.view",
     "search.highlight",
@@ -68,3 +69,8 @@ admonition = {}
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/sramakrishnaa"
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
