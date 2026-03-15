@@ -38,6 +38,7 @@ features = [
     "navigation.tabs",
     # "navigation.sections",
     "navigation.indexes",
+    "navigation.footer",
     "navigation.top",
     "navigation.path",
     "toc.follow",
