@@ -89,7 +89,7 @@ admonition = {}
 attr_list = {}
 md_in_html = {}
 footnotes = {}
-toc = { toc_depth = 4 }
+toc = { toc_depth = 4,permalink = true}
 "pymdownx.details" = {}
 "pymdownx.inlinehilite" = {}
 "pymdownx.snippets" = {}
