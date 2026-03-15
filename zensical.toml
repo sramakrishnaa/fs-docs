@@ -1,5 +1,6 @@
 [project]
 site_name = "FS Docs"
+site_description = "Official documentation for FS Docs"
 site_author = "Ramakrishna Sangamreddy"
 site_url = "https://sramakrishnaa.github.io/fs-docs/"
 copyright = "Copyright © 2026 Ramakrishna Sangamreddy"
@@ -7,15 +8,35 @@ repo_url = "https://github.com/sramakrishnaa/fs-docs"
 repo_name = "sramakrishnaa/fs-docs"
 edit_uri = "edit/main/docs/"
 
+nav = [
+    { "Java" = [
+        { "Strings" = [
+            "java/01-strings/01-introduction_to_strings.md",
+            {"String Creation" = [
+                "java/01-strings/02-string-creation/index.md",
+                "java/01-strings/02-string-creation/01-string-literals.md",
+                "java/01-strings/02-string-creation/02-using-new-keyword.md",
+                "java/01-strings/02-string-creation/03-from-character-arrays.md",
+                "java/01-strings/02-string-creation/04-from-byte-arrays.md",
+                "java/01-strings/02-string-creation/05-from-stringbuilder-stringbuffer.md",
+                "java/01-strings/02-string-creation/06-constructor-overload.md",
+            ]}
+        ]},
+    ] },
+]
+
 [project.theme]
-name = "classic"
+name = "material"
 language = "en"
+logo = "assets/logo.png"
+favicon = "assets/favicon.png"
 features = [
     "navigation.instant",
     "navigation.instant.prefetch",
     "navigation.instant.progress",
     "navigation.tracking",
     "navigation.tabs",
+    # "navigation.sections",
     "navigation.indexes",
     "navigation.top",
     "navigation.path",
@@ -26,6 +47,8 @@ features = [
     "content.code.select",
     "content.action.edit",
     "content.action.view",
+    "content.tooltips",
+    "content.footnote.tooltips",
     "search.highlight",
     "search.share",
     "search.suggest",
@@ -48,29 +71,36 @@ toggle.name = "Switch to light mode"
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
+primary = "indigo"
+accent = "indigo"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
+primary = "indigo"
+accent = "indigo"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
 [project.markdown_extensions]
 admonition = {}
-"pymdownx.highlight" = { anchor_linenums = true, line_spans = "__span", pygments_lang_class = true }
+attr_list = {}
+md_in_html = {}
+footnotes = {}
+toc = { toc_depth = 4 }
+"pymdownx.details" = {}
 "pymdownx.inlinehilite" = {}
 "pymdownx.snippets" = {}
-"pymdownx.superfences" = {}
 "pymdownx.tabbed" = { alternate_style = true }
-"pymdownx.details" = {}
+"pymdownx.highlight" = { anchor_linenums = true, line_spans = "__span", pygments_lang_class = true }
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/sramakrishnaa"
-
-[project.markdown_extensions.pymdownx.superfences]
-custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
-]
